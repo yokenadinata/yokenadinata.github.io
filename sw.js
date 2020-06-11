@@ -30,17 +30,11 @@ self.addEventListener('install', function(event) {
     caches.open('static')
       .then(function(cache) {
         console.log('[Service Worker] Precaching App Shell');
-        cache.addAll([
-          '/',
-          '/index.html',
-          '/script/index.js',
-          '/resource/bootstrap.min.css',
-          '/resource/bootstrap.min.js',
-          '/resource/jquery.min.css'
-        ])
+        cache.add('/index.html')
       })
   )
 });
+
 
 self.addEventListener('activate', function(event) {
   console.log('[Service Worker] Activating Service Worker ....', event);
