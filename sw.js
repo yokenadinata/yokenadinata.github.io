@@ -56,7 +56,7 @@ self.addEventListener('fetch', (event) => {
         return response;
       });
     }).catch(() => {
-      return caches.match('/icons/icon-512x512.png');
+      return caches.match('/index.html');
     })
   );
 });
