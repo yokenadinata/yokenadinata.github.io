@@ -29,7 +29,12 @@
         }
         body{
             background-image: url("source/dayne-topkin-4jjSan_VD8k-unsplash.jpg");
-            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            width: 100vw;
+            height: 100vh;
         }
 
 
@@ -64,7 +69,7 @@
                     </div>
                     <div class="col-md-2">
                         <br><Br>
-                      <button class="btn btn-outline-primary btn-block" onclick="fetchMovie()">Search</button>
+                      <button class="btn btn-primary btn-block" onclick="fetchMovie()">Search</button>
 
                         
 
@@ -100,7 +105,7 @@
                 </div>
                 <div class="row my-3">
                     <div class="col-md-12 text-right" id="idShow">
-                        <a class="btn btn-outline-success" style="color: white;" onclick="showMore()">Show More</a>
+                        <a class="btn btn-success" style="color: white;" onclick="showMore()">Show More</a>
                     </div>
                 </div>
 
