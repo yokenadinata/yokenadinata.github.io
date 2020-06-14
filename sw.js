@@ -58,8 +58,8 @@ self.addEventListener('fetch', (event) => {
         return response;
       });
     }).catch(() => {
-      console.log('ini belum ada inet');
-      window.alert("sometext");
+      //console.log('ini belum ada inet');
+      //window.alert("sometext");
       return caches.match('/offline.html');
     })
   );
