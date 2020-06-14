@@ -1,5 +1,6 @@
 self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
+  self.skipWaiting(); //PENTING bila ada versi baru!!
   event.waitUntil(
     caches.open('static')
     .then(function(cache) {
