@@ -1,4 +1,4 @@
-var CACHE_STATIC_NAME = 'static-v3';
+var CACHE_STATIC_NAME = 'static-v1';
 
 self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
@@ -54,7 +54,6 @@ self.addEventListener('fetch', (event) => {
       return resp || fetch(event.request).then((response) => {
         let responseClone = response.clone();
         caches.open(CACHE_STATIC_NAME).then((cache) => {
-                cache.delete('/random')
           cache.put(event.request, responseClone);
         });
 
