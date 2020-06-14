@@ -50,12 +50,14 @@ self.addEventListener('fetch', (event) => {
       return resp || fetch(event.request).then((response) => {
         let responseClone = response.clone();
         caches.open('static').then((cache) => {
+                cache.delete('/random')
           cache.put(event.request, responseClone);
         });
 
         return response;
       });
     }).catch(() => {
+      console.log('ini belum ada inet');
       return caches.match('/index.html');
     })
   );
