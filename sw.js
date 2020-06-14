@@ -59,7 +59,7 @@ self.addEventListener('fetch', (event) => {
       });
     }).catch(() => {
       console.log('ini belum ada inet');
-      alert("You're offline!");
+      window.alert("sometext");
       return caches.match('/offline.html');
     })
   );
