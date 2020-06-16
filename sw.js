@@ -1,4 +1,4 @@
-var CACHE_STATIC_NAME = 'static-v7';
+var CACHE_STATIC_NAME = 'static-v8';
 
 self.addEventListener('install', function(event) {
   console.log('[Service Worker] Installing Service Worker ...', event);
